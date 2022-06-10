@@ -36,7 +36,7 @@ import tensorflow as tf
 
 SEQUENCE_LENGTH = 196_608
 BIN_SIZE = 128
-TARGET_LENGTH = 896
+TARGET_LENGTH = 1536
 
 
 class Enformer(snt.Module):
@@ -60,7 +60,7 @@ class Enformer(snt.Module):
     """
     super().__init__(name=name)
     # pylint: disable=g-complex-comprehension,g-long-lambda,cell-var-from-loop
-    heads_channels = {'human': 5313, 'mouse': 1643}
+    heads_channels = {'atha': 8}
     dropout_rate = 0.4
     assert channels % num_heads == 0, ('channels needs to be divisible '
                                        f'by {num_heads}')
